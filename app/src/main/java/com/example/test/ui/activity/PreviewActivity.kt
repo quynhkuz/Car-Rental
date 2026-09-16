@@ -1,13 +1,10 @@
-package com.example.test
+package com.example.test.ui.activity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.example.test.CropActivity.Companion.EXTRA_IMAGE_PATH
-import com.example.test.CropActivity.Companion.EXTRA_QUAD
+import com.example.test.ui.activity.CropActivity.Companion.EXTRA_QUAD
+import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityPreviewBinding
 import org.fairscan.imageprocessing.Point
 import org.fairscan.imageprocessing.Quad
@@ -75,8 +72,8 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>(ActivityPreviewBind
                     }
                 })
             } else {
-                android.widget.Toast.makeText(
-                    this, "Không có quad để chỉnh sửa", android.widget.Toast.LENGTH_SHORT
+                Toast.makeText(
+                    this, "Không có quad để chỉnh sửa", Toast.LENGTH_SHORT
                 ).show()
             }
 

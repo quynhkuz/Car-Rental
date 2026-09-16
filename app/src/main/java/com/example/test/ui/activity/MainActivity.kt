@@ -1,13 +1,17 @@
-package com.example.test
+package com.example.test.ui.activity
 
 import android.Manifest
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.test.CameraViewModel
+import com.example.test.ImageSegmentationService
+import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityMainBinding
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
@@ -18,6 +22,9 @@ import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.fairscan.imageprocessing.Quad
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
@@ -120,7 +127,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
      * Đổi nội dung hàm này tuỳ ý: mở Activity khác kèm 2 Uri, log ra, gọi API upload, v.v.
      */
     private fun onImagesCaptured(originalPath: String, croppedPath: String?, quad: Quad?) {
-        android.util.Log.i("MainActivity", "originalPath=$originalPath croppedPath=$croppedPath")
+        Log.i("MainActivity", "originalPath=$originalPath croppedPath=$croppedPath")
 
         val message = if (croppedPath != null) {
             "Ảnh gốc: $originalPath\nẢnh cắt: $croppedPath"
@@ -155,15 +162,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
     /** Lưu vào bộ nhớ cache của app (cacheDir) — hệ thống có thể tự xoá khi thiếu dung lượng. */
     private fun saveBitmap(bitmap: Bitmap, name: String): String? {
-        val dir = java.io.File(cacheDir, "Test").apply { mkdirs() }
-        val file = java.io.File(dir, "$name.jpg")
+        val dir = File(cacheDir, "Test").apply { mkdirs() }
+        val file = File(dir, "$name.jpg")
         return try {
-            java.io.FileOutputStream(file).use { out ->
+            FileOutputStream(file).use { out ->
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
             }
             file.absolutePath
-        } catch (e: java.io.IOException) {
-            android.util.Log.e("MainActivity", "Lưu ảnh thất bại", e)
+        } catch (e: IOException) {
+            Log.e("MainActivity", "Lưu ảnh thất bại", e)
             null
         }
     }

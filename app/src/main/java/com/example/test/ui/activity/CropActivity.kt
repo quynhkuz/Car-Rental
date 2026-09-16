@@ -1,14 +1,14 @@
-package com.example.test
+package com.example.test.ui.activity
 
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.test.crop.CropView
+import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityCropBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,6 +18,9 @@ import org.fairscan.imageprocessing.Quad
 import org.fairscan.imageprocessing.extractDocument
 import org.opencv.android.Utils
 import org.opencv.core.Mat
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
 /**
  * Ví dụ dùng CropView: nhận đường dẫn ảnh gốc (String) + quad ban đầu (8 số double),
@@ -129,15 +132,15 @@ class CropActivity : BaseActivity<ActivityCropBinding>(ActivityCropBinding::infl
 
     /** Lưu vào bộ nhớ cache của app (cacheDir), trả về đường dẫn tuyệt đối. */
     private fun saveBitmap(bitmap: Bitmap, name: String): String? {
-        val dir = java.io.File(cacheDir, "Test").apply { mkdirs() }
-        val file = java.io.File(dir, "$name.jpg")
+        val dir = File(cacheDir, "Test").apply { mkdirs() }
+        val file = File(dir, "$name.jpg")
         return try {
-            java.io.FileOutputStream(file).use { out ->
+            FileOutputStream(file).use { out ->
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
             }
             file.absolutePath
-        } catch (e: java.io.IOException) {
-            android.util.Log.e("CropActivity", "Lưu ảnh thất bại", e)
+        } catch (e: IOException) {
+            Log.e("CropActivity", "Lưu ảnh thất bại", e)
             null
         }
     }

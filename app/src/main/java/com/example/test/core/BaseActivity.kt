@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.test.core
 
 import android.content.Intent
 import android.graphics.Color
@@ -24,7 +24,7 @@ abstract class BaseActivity<B : ViewBinding>(val bindingFactory: (LayoutInflater
 
     val binding: B by lazy { bindingFactory(layoutInflater) }
 
-//    val mySharedPre: MySharedPreferences by lazy { MySharedPreferences(this) }
+    val mySharedPre: MySharedPreferences by lazy { MySharedPreferences(this) }
 
     private var activityResultCallback: ((ActivityResult) -> Unit)? = null
     private val activityLauncher =
