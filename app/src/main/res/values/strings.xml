@@ -2,4 +2,21 @@
     <string name="app_name">Test</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="email_phone_number">Email/Phone Number</string>
+    <string name="welcome_back_ready_to_hit_the_road">Welcome Back \nReady to hit the road</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login">Login</string>
+    <string name="sing_up">Sing up</string>
+    <string name="full_name">Full name</string>
+    <string name="email_address">Email Address</string>
+    <string name="already_have_an_account_login">Already have an account? Login.</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up.</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="enter_the_email_address_associated_with_your_account_and_nwe_ll_send_you_a_link_to_reset_your_password">Enter the email address associated with your account and\nwe\'ll send you a link to reset your password.</string>
+    <string name="email">Email</string>
+    <string name="continue_1">Continue</string>
+    <string name="return_to_sing_in">Return to sing in</string>
+    <string name="create_a_new_account">Create a New account</string>
 </resources>

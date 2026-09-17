@@ -6,14 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cl_primary"
-    tools:context=".ui.activity.LoginActivity">
+    tools:context=".ui.activity.SingUpActivity">
 
     <com.example.test.ui.csview.StatusBarView
         android:id="@+id/v_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/ic_car"
@@ -42,100 +41,73 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_13sdp"
         android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintRight_toRightOf="parent"
         android:fontFamily="@font/roboto_semibold"
         android:includeFontPadding="false"
-        android:text="@string/welcome_back_ready_to_hit_the_road"
+        android:text="@string/sing_up"
         android:textColor="@color/black"
         android:textSize="@dimen/_24sdp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ic_car" />
 
     <com.example.test.ui.csview.CsEditText
-        android:id="@+id/edt_tk"
+        android:id="@+id/edt_full_name"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginLeft="@dimen/_13sdp"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginRight="@dimen/_13sdp"
-        android:hint="@string/email_phone_number"
+        android:hint="@string/full_name"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <com.example.test.ui.csview.CsEditText
-        android:id="@+id/edt_pass"
+        android:id="@+id/edt_address"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginLeft="@dimen/_13sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_13sdp"
-        android:drawableRight="@drawable/ic_hide_txt"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/edt_tk" />
+        android:hint="@string/email_address"
+        app:layout_constraintTop_toBottomOf="@id/edt_full_name" />
 
-    <LinearLayout
-        android:id="@+id/v_check_login"
-        app:layout_constraintTop_toBottomOf="@id/edt_pass"
+    <com.example.test.ui.csview.CsEditText
+        android:id="@+id/edt_pass_word"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
         android:layout_marginLeft="@dimen/_13sdp"
         android:layout_marginTop="@dimen/_15sdp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_un_check"/>
-        <TextView
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/remember_me"
-            android:textSize="@dimen/_11sdp"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="#7F7F7F"/>
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_forgot"
-        app:layout_constraintTop_toTopOf="@id/v_check_login"
-        app:layout_constraintBottom_toBottomOf="@id/v_check_login"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="@dimen/_13sdp"
-        android:padding="@dimen/_5sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        android:textSize="@dimen/_11sdp"
-        android:fontFamily="@font/roboto_regular"
-        android:textColor="#7F7F7F"/>
+        android:hint="@string/password"
+        android:drawableRight="@drawable/ic_hide_txt"
+        app:layout_constraintTop_toBottomOf="@id/edt_address" />
 
-        <com.example.test.ui.csview.CsButton
-            android:id="@+id/btn_login"
-            android:layout_marginTop="@dimen/_25sdp"
-            app:layout_constraintTop_toBottomOf="@id/v_check_login"
-            android:layout_marginLeft="@dimen/_13sdp"
-            android:layout_marginRight="@dimen/_13sdp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:text="@string/login"
-            app:typeColor="black"/>
 
     <com.example.test.ui.csview.CsButton
-        android:id="@+id/btn_singup"
-        android:layout_marginTop="@dimen/_15sdp"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        android:id="@+id/btn_sing_up"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/edt_pass_word"
         android:layout_marginLeft="@dimen/_13sdp"
         android:layout_marginRight="@dimen/_13sdp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:text="@string/sing_up"
+        app:typeColor="black"/>
+
+    <com.example.test.ui.csview.CsButton
+        android:id="@+id/btn_login"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/btn_sing_up"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="@string/login"
         app:typeColor="gray"/>
 
+
     <TextView
-        android:id="@+id/tv_sing_up"
+        android:id="@+id/tv_login"
         android:padding="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -143,7 +115,7 @@
         android:layout_marginBottom="@dimen/_25sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/don_t_have_an_account_sign_up"
+        android:text="@string/already_have_an_account_login"
         android:textSize="@dimen/_11sdp"
         android:fontFamily="@font/roboto_regular"
         android:textColor="#7F7F7F"/>

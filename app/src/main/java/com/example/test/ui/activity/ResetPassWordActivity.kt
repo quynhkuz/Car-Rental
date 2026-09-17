@@ -7,24 +7,19 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.test.R
 import com.example.test.core.BaseActivity
-import com.example.test.databinding.ActivityLoginBinding
+import com.example.test.databinding.ActivityResetPassWordBinding
 
-class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {
+class ResetPassWordActivity : BaseActivity<ActivityResetPassWordBinding>(ActivityResetPassWordBinding::inflate) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        binding.tvReturn.click {
+            closeActivity()
+        }
 
         binding.tvSingUp.click {
-            openActivity(SingUpActivity::class.java)
-        }
-
-        binding.tvForgot.click {
-            openActivity(ResetPassWordActivity::class.java)
-        }
-
-        binding.btnSingup.click {
             openActivity(SingUpActivity::class.java)
         }
 

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cl_primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ResetPassWordActivity">
+
+    <com.example.test.ui.csview.StatusBarView
+        android:id="@+id/v_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/ic_car"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_status" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        android:text="Quent"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/ic_car"
+        app:layout_constraintLeft_toRightOf="@id/ic_car"
+        app:layout_constraintTop_toTopOf="@id/ic_car" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_80sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/roboto_semibold"
+        android:includeFontPadding="false"
+        android:text="@string/reset_your_password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_car" />
+
+    <TextView
+        android:id="@+id/tv_gmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:text="@string/enter_the_email_address_associated_with_your_account_and_nwe_ll_send_you_a_link_to_reset_your_password"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="#7F7F7F"/>
+
+    <com.example.test.ui.csview.CsEditText
+        android:id="@+id/edt_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:hint="@string/email"
+        app:layout_constraintTop_toBottomOf="@id/tv_gmail" />
+
+    <com.example.test.ui.csview.CsButton
+        android:id="@+id/btn_continue"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/edt_full_name"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="@string/continue_1"
+        app:typeColor="black"/>
+
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/btn_continue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/return_to_sing_in"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="#454545"/>
+
+
+    <TextView
+        android:id="@+id/tv_sing_up"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_a_new_account"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="#7F7F7F"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

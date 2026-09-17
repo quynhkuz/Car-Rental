@@ -45,15 +45,17 @@ class CsButton : AppCompatButton {
             R.font.roboto_bold
         )
 
-        Log.e("AAA","TYPE " + type)
+        isAllCaps = false
 
         if(type == 0){
             setBackgroundResource(R.drawable.cs_btn_black)
+            setTextColor("#FFFFFF".toColorInt())
         }
         else{
             setBackgroundResource(R.drawable.cs_btn_gray)
+            setTextColor("#000000".toColorInt())
         }
-        setTextColor("#FFFFFF".toColorInt())
+
 
     }
 
