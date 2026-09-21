@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Test</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
     <string name="password">Password</string>
     <string name="email_phone_number">Email/Phone Number</string>
     <string name="welcome_back_ready_to_hit_the_road">Welcome Back \nReady to hit the road</string>

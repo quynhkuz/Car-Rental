@@ -5,34 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.test.camera.CameraPreviewView
-        android:id="@+id/cameraPreviewView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="3:4"
+    <com.example.test.ui.csview.StatusBarView
+        android:id="@+id/v_status"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/captureButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Chụp"
+    <FrameLayout
+        android:id="@+id/v_fg_home"
+        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout
+        android:id="@+id/v_fg_search"
+        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout
+        android:id="@+id/v_fg_profile"
+        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    
+    
+    <LinearLayout
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/cs_bg_nav"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ic_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nav_home"/>
+        <ImageView
+            android:id="@+id/ic_search"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nav_search"/>
+        <ImageView
+            android:id="@+id/ic_profile"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nav_user"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/flashButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="Đèn: Tắt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
