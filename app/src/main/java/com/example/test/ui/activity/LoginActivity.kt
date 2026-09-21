@@ -28,6 +28,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
             openActivity(SingUpActivity::class.java)
         }
 
+        binding.btnLogin.click {
+            openActivity(MainActivity::class.java)
+        }
     }
 
 
