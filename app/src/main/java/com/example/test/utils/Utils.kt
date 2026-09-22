@@ -1,10 +1,27 @@
 package com.example.test.utils
 
+import android.content.res.Resources
+import android.graphics.drawable.GradientDrawable
+import android.view.View
+import androidx.annotation.ColorInt
 
 
-const val KEY_DATA = "key_data"
-const val KEY_TYPE = "key_type"
 
-const val TYPE_HOME = "type_home"
-const val TYPE_SEARCH = "type_search"
-const val TYPE_PROFILE = "type_profile"
+
+
+
+private val Float.dp: Float get() = this * Resources.getSystem().displayMetrics.density
+
+fun View.setRoundedBackground(
+    @ColorInt color: Int,
+    radiusDp: Float = 0f,
+    strokeWidthDp: Float = 0f,
+    @ColorInt strokeColor: Int = 0
+) {
+    background = GradientDrawable().apply {
+        shape = GradientDrawable.RECTANGLE
+        setColor(color)
+        cornerRadius = radiusDp.dp
+        if (strokeWidthDp > 0f) setStroke(strokeWidthDp.dp.toInt(), strokeColor)
+    }
+}

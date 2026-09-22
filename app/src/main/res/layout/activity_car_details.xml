@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_primary"
+    tools:context=".ui.activity.CarDetailsActivity">
+
+    <com.example.test.ui.csview.StatusBarView
+        android:id="@+id/v_status"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ic_back"
+        app:layout_constraintTop_toBottomOf="@id/v_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"/>
+
+    <com.example.test.ui.csview.CsTextTitle
+        app:layout_constraintTop_toTopOf="@id/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_details"/>
+    
+    <ImageView
+        android:id="@+id/img_car"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ic_back"
+        android:src="@drawable/img_car_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v_info"
+        android:background="@drawable/cs_bg_view_info"
+        app:layout_constraintTop_toBottomOf="@id/img_car"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.example.test.ui.csview.CsTextName
+            android:id="@+id/tv_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tesla Model S"/>
+
+        <com.example.test.ui.csview.CsTextContent
+            android:id="@+id/tv_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A car with high specs that are rented ot"
+            />
+
+        <View
+            android:id="@+id/v_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#D7D7D7"/>
+        
+        <ImageView
+            android:id="@+id/img_help"
+            app:layout_constraintTop_toBottomOf="@id/v_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/img_help"/>
+
+        <com.example.test.ui.csview.CsTextName
+            android:id="@+id/tv_help"
+            app:layout_constraintTop_toTopOf="@id/img_help"
+            app:layout_constraintBottom_toBottomOf="@id/img_help"
+            app:layout_constraintLeft_toRightOf="@id/img_help"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hela Quintin"/>
+        <ImageView
+            app:layout_constraintTop_toTopOf="@id/tv_help"
+            app:layout_constraintBottom_toBottomOf="@id/tv_help"
+            app:layout_constraintLeft_toRightOf="@id/tv_help"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tick"/>
+
+        <ImageView
+            android:id="@+id/ic_phone"
+            app:layout_constraintRight_toLeftOf="@id/ic_message"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="@id/img_help"
+            app:layout_constraintBottom_toBottomOf="@id/img_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone"/>
+        <ImageView
+            android:id="@+id/ic_message"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_help"
+            app:layout_constraintBottom_toBottomOf="@id/img_help"
+            android:layout_marginRight="@dimen/_13sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_messenge"/>
+
+        <com.example.test.ui.csview.CsTextName
+            android:id="@+id/tv_features"
+            app:layout_constraintTop_toBottomOf="@id/img_help"
+            app:layout_constraintLeft_toLeftOf="@id/img_help"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/car_features"/>
+
+        <LinearLayout
+            android:id="@+id/v_capacity"
+            android:layout_marginLeft="@dimen/_13sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_engine"
+            app:layout_constraintTop_toBottomOf="@id/tv_features"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_capacity"/>
+            <com.example.test.ui.csview.CsTextContent
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacity"/>
+            <com.example.test.ui.csview.CsTextName
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="5 Seats"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/v_engine"
+            app:layout_constraintTop_toTopOf="@id/v_capacity"
+            app:layout_constraintBottom_toBottomOf="@id/v_capacity"
+            app:layout_constraintLeft_toRightOf="@id/v_capacity"
+            app:layout_constraintRight_toLeftOf="@id/v_speed"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_engine"/>
+            <com.example.test.ui.csview.CsTextContent
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engine Out"/>
+            <com.example.test.ui.csview.CsTextName
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="670 HP"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/v_speed"
+            android:layout_marginRight="@dimen/_13sdp"
+            app:layout_constraintTop_toTopOf="@id/v_capacity"
+            app:layout_constraintBottom_toBottomOf="@id/v_capacity"
+            app:layout_constraintLeft_toRightOf="@id/v_engine"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_capacity"/>
+            <com.example.test.ui.csview.CsTextContent
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max Speed"/>
+            <com.example.test.ui.csview.CsTextName
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="250km/h"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/v_advance"
+            android:layout_marginLeft="@dimen/_13sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_charge"
+            app:layout_constraintTop_toBottomOf="@id/v_capacity"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_advance"/>
+            <com.example.test.ui.csview.CsTextContent
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advance"/>
+            <com.example.test.ui.csview.CsTextName
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Autopilot"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/v_charge"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="@id/v_advance"
+            app:layout_constraintBottom_toBottomOf="@id/v_advance"
+            app:layout_constraintLeft_toRightOf="@id/v_advance"
+            app:layout_constraintRight_toLeftOf="@id/v_parking"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_charge"/>
+            <com.example.test.ui.csview.CsTextContent
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single Charge"/>
+            <com.example.test.ui.csview.CsTextName
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="405 Miles"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/v_parking"
+            app:layout_constraintTop_toTopOf="@id/v_advance"
+            app:layout_constraintBottom_toBottomOf="@id/v_advance"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/_13sdp"
+            app:layout_constraintLeft_toRightOf="@+id/v_charge"
+            android:layout_width="0dp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_parking"/>
+            <com.example.test.ui.csview.CsTextContent
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advance"/>
+            <com.example.test.ui.csview.CsTextName
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Auto Parking"/>
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

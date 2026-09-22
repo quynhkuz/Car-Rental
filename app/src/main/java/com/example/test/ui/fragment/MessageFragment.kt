@@ -7,11 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.test.R
 import com.example.test.core.BaseFragment
-import com.example.test.databinding.FragmentHomeBinding
-import com.example.test.ui.activity.CarDetailsActivity
+import com.example.test.databinding.FragmentMessageBinding
 
-
-class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
+class MessageFragment : BaseFragment<FragmentMessageBinding>(FragmentMessageBinding::inflate) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,19 +17,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     }
 
-
     override fun onInitView(view: View, savedInstanceState: Bundle?) {
         super.onInitView(view, savedInstanceState)
 
-        binding.icArrange.click {
-            openActivity(CarDetailsActivity::class.java)
-        }
-
     }
-
 
     companion object {
         @JvmStatic
-        fun newInstance() = HomeFragment()
+        fun newInstance() = MessageFragment()
     }
 }

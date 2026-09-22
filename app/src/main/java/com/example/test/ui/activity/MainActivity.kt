@@ -6,11 +6,14 @@ import androidx.core.graphics.toColorInt
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityMainBinding
 import com.example.test.ui.fragment.HomeFragment
+import com.example.test.ui.fragment.MessageFragment
 import com.example.test.ui.fragment.ProfileFragment
 import com.example.test.ui.fragment.SearchFragment
 import com.example.test.utils.TYPE_HOME
+import com.example.test.utils.TYPE_MESSAGE
 import com.example.test.utils.TYPE_SEARCH
 import com.example.test.utils.TYPE_PROFILE
+import java.text.MessageFormat
 
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
@@ -18,6 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     var fgHome : HomeFragment? = null
     var fgSearch : SearchFragment? = null
     var fgProfile : ProfileFragment? = null
+    var fgMessage : MessageFragment? = null
 
     var type = ""
 
@@ -34,6 +38,29 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
         binding.icProfile.click {
             openProfile()
+        }
+
+        binding.icMessage.click {
+            openMessage()
+        }
+
+    }
+
+    fun openMessage() {
+        if (type != TYPE_MESSAGE)
+        {
+            restViewNav()
+            type = TYPE_MESSAGE
+            binding.icMessage.imageTintList =
+                ColorStateList.valueOf(
+                    "#FFFFFF".toColorInt()
+                )
+            binding.vFgMessage.show()
+            if (fgMessage == null)
+            {
+                fgMessage = MessageFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(binding.vFgMessage.id,fgMessage!!).commit()
+            }
         }
     }
 
@@ -107,6 +134,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         binding.vFgHome.hide()
         binding.vFgSearch.hide()
         binding.vFgProfile.hide()
+        binding.vFgMessage.hide()
 
         binding.icHome.imageTintList =
             ColorStateList.valueOf(
@@ -117,6 +145,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                 "#767676".toColorInt()
             )
         binding.icProfile.imageTintList =
+            ColorStateList.valueOf(
+                "#767676".toColorInt()
+            )
+        binding.icMessage.imageTintList =
             ColorStateList.valueOf(
                 "#767676".toColorInt()
             )

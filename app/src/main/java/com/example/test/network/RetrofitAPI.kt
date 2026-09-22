@@ -48,10 +48,9 @@ object RetrofitAPI {
     }
 
 
-
     var apiService : APIService = Retrofit.Builder()
         .client(getRetrofitClient())
-        .baseUrl("https://sascorpvn.com/")
+        .baseUrl("https://sims-drunk-pty-aware.trycloudflare.com/")
         .addConverterFactory(GsonConverterFactory.create(getGson()))
         .build()
         .create(APIService::class.java)

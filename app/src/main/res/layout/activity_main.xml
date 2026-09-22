@@ -11,21 +11,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:id="@+id/ic_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/ic_car"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_status" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:includeFontPadding="false"
+        android:text="Quent"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/ic_car"
+        app:layout_constraintLeft_toRightOf="@id/ic_car"
+        app:layout_constraintTop_toTopOf="@id/ic_car" />
+
     <FrameLayout
         android:id="@+id/v_fg_home"
-        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ic_car"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"/>
     <FrameLayout
         android:id="@+id/v_fg_search"
-        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ic_car"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"/>
     <FrameLayout
         android:id="@+id/v_fg_profile"
-        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ic_car"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout
+        android:id="@+id/v_fg_message"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ic_car"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -38,7 +71,7 @@
         android:layout_marginLeft="@dimen/_13sdp"
         android:layout_marginRight="@dimen/_13sdp"
         android:layout_width="match_parent"
-        android:weightSum="3"
+        android:weightSum="4"
         android:gravity="center_vertical"
         android:layout_height="@dimen/_50sdp"
         android:orientation="horizontal">
@@ -58,6 +91,14 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_nav_search"/>
+        <ImageView
+            android:id="@+id/ic_message"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nav_message"/>
         <ImageView
             android:id="@+id/ic_profile"
             android:paddingTop="@dimen/_10sdp"
