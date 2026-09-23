@@ -1,9 +1,8 @@
-package com.example.test.ui.activity
+package com.example.test.ui.activity.camera
 
 import android.os.Bundle
 import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.example.test.ui.activity.CropActivity.Companion.EXTRA_QUAD
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityPreviewBinding
 import org.fairscan.imageprocessing.Point
@@ -54,7 +53,7 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>(ActivityPreviewBind
                 openActivityCallBack(CropActivity::class.java, bundle = Bundle().apply {
                     putString(CropActivity.EXTRA_IMAGE_PATH, imgOriginal)
                     putDoubleArray(
-                        EXTRA_QUAD,
+                        CropActivity.EXTRA_QUAD,
                         doubleArrayOf(
                             quad!!.topLeft.x, quad!!.topLeft.y,
                             quad!!.topRight.x, quad!!.topRight.y,

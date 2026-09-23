@@ -1,4 +1,4 @@
-package com.example.test.ui.activity
+package com.example.test.ui.activity.login
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,10 +8,6 @@ import android.text.InputType
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.MotionEvent
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.test.R
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivitySingUpBinding

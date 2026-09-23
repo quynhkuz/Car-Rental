@@ -27,16 +27,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
-            android:name=".ui.activity.CropActivity"
+            android:name=".ui.activity.camera.CropActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.PreviewActivity"
+            android:name=".ui.activity.camera.PreviewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.LoginActivity"
+            android:name=".ui.activity.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,15 +45,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.SingUpActivity"
+            android:name=".ui.activity.login.SingUpActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.activity.ResetPassWordActivity"
+            android:name=".ui.activity.login.ResetPassWordActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.activity.TakePhotoActivity"
+            android:name=".ui.activity.camera.TakePhotoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity

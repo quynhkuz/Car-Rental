@@ -1,4 +1,4 @@
-package com.example.test.ui.activity
+package com.example.test.ui.activity.login
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
@@ -8,19 +8,13 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.MotionEvent
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.test.R
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityLoginBinding
-import com.example.test.model.LoginRequest
+import com.example.test.ui.activity.MainActivity
 import com.example.test.viewmodel.CarViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlin.math.log
-
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {

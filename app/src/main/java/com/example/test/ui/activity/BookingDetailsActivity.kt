@@ -10,8 +10,11 @@ import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityBookingDetailsBinding
 
 class BookingDetailsActivity : BaseActivity<ActivityBookingDetailsBinding>(ActivityBookingDetailsBinding::inflate) {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
+
+
 }

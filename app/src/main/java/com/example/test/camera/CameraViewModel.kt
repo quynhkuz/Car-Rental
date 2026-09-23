@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.test.camera
 
 import android.graphics.Bitmap
 import android.graphics.Bitmap.createBitmap
@@ -7,8 +7,7 @@ import androidx.camera.core.ImageProxy
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.test.camera.LiveAnalysisState
-import com.example.test.camera.QuadStabilizer
+import com.example.test.ImageSegmentationService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -153,5 +152,5 @@ class CameraViewModel(
 fun rotateBitmap(source: Bitmap, angle: Float): Bitmap {
     val matrix = Matrix()
     matrix.postRotate(angle)
-    return Bitmap.createBitmap(source, 0, 0, source.width, source.height, matrix, true)
+    return createBitmap(source, 0, 0, source.width, source.height, matrix, true)
 }

@@ -7,4 +7,40 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.PaymentMethodsActivity">
 
+    <com.example.test.ui.csview.StatusBarView
+        android:id="@+id/v_status"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ic_back"
+        app:layout_constraintTop_toBottomOf="@id/v_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"/>
+
+    <com.example.test.ui.csview.CsTextTitle
+        app:layout_constraintTop_toTopOf="@id/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_methods"/>
+
+    <ImageView
+        android:id="@+id/v_cradit"
+        app:layout_constraintTop_toBottomOf="@+id/ic_back"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_cradit"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

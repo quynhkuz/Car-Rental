@@ -1,15 +1,11 @@
-package com.example.test.ui.activity
+package com.example.test.ui.activity.login
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.test.R
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityResetPassWordBinding
 
-class ResetPassWordActivity : BaseActivity<ActivityResetPassWordBinding>(ActivityResetPassWordBinding::inflate) {
+class ResetPassWordActivity : BaseActivity<ActivityResetPassWordBinding>(
+    ActivityResetPassWordBinding::inflate) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

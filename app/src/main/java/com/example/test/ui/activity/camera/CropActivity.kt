@@ -1,4 +1,4 @@
-package com.example.test.ui.activity
+package com.example.test.ui.activity.camera
 
 import android.content.Context
 import android.content.Intent

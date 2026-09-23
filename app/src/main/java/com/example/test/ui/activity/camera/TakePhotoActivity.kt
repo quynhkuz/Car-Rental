@@ -1,21 +1,16 @@
-package com.example.test.ui.activity
+package com.example.test.ui.activity.camera
 
 import android.Manifest
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.test.CameraViewModel
+import com.example.test.camera.CameraViewModel
 import com.example.test.ImageSegmentationService
-import com.example.test.R
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityTakePhotoBinding
 import com.karumi.dexter.Dexter

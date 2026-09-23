@@ -7,7 +7,7 @@
     android:background="@color/cl_primary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.ResetPassWordActivity">
+    tools:context=".ui.activity.login.ResetPassWordActivity">
 
     <com.example.test.ui.csview.StatusBarView
         android:id="@+id/v_status"
