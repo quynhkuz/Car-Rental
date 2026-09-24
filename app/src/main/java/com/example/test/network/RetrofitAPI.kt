@@ -50,7 +50,7 @@ object RetrofitAPI {
 
     var apiService : APIService = Retrofit.Builder()
         .client(getRetrofitClient())
-        .baseUrl("https://sims-drunk-pty-aware.trycloudflare.com/")
+        .baseUrl("http://100.86.242.10:5160/")
         .addConverterFactory(GsonConverterFactory.create(getGson()))
         .build()
         .create(APIService::class.java)

@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.test.R
 import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityLoginBinding
+import com.example.test.model.login.LoginRequest
 import com.example.test.ui.activity.MainActivity
 import com.example.test.viewmodel.CarViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,8 +41,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
         }
 
         binding.btnLogin.click {
-            val tk = binding.edtTk.text.toString()
-            val mk = binding.edtPass.text.toString()
+//            val tk = binding.edtTk.text.toString()
+//            val mk = binding.edtPass.text.toString()
 
 //            if(tk.isNotEmpty() || mk.isNotEmpty()){
 //                viewModel.login(LoginRequest(tk,mk))
@@ -50,17 +51,23 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
 //            }
 
 
-            openActivity(MainActivity::class.java)
+            val tk = "0364184928"
+            val mk = "test"
+            viewModel.login(LoginRequest(tk, mk))
+
+//            openActivity(MainActivity::class.java)
         }
     }
 
     private fun observerData() {
         viewModel.loginResponse.observe(this){result ->
             if(result.isSuccess){
-                Log.e("AAA","Data " + result.getOrNull())
+                Log.e("AAA","Data " + result.getOrNull().toString())
             }
             else{
                 showToast(getString(R.string.error))
+
+                Log.e("AAA","Data " + result.getOrNull())
             }
         }
     }
