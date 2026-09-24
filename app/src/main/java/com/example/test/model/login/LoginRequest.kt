@@ -1,4 +1,4 @@
-package com.example.test.model
+package com.example.test.model.login
 
 data class LoginRequest(
     val phone: String,

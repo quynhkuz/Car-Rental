@@ -1,12 +1,12 @@
 package com.example.test.network
 
-import com.example.test.model.LoginRequest
-import com.example.test.model.LoginResponse
+import com.example.test.model.login.Dto_login
+import com.example.test.model.login.LoginRequest
+import com.example.test.model.register.Dto_register
+import com.example.test.model.register.RegisterRequest
 import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Query
 
 
 interface APIService {
@@ -22,7 +22,14 @@ interface APIService {
     @POST("auth/login")
     suspend fun login(
         @Body request: LoginRequest
-    ): Response<LoginResponse>
+    ): Response<Dto_login>
+
+
+    @POST("auth/register")
+    suspend fun register(
+        @Body request: RegisterRequest
+    ): Response<Dto_register>
+
 
 
 }

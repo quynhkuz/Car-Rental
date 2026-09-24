@@ -1,8 +1,8 @@
 package com.example.test.viewmodel
 
 import android.util.Log
-import com.example.test.model.LoginRequest
-import com.example.test.model.LoginResponse
+import com.example.test.model.login.Dto_login
+import com.example.test.model.login.LoginRequest
 import com.example.test.network.RetrofitAPI
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -72,7 +72,7 @@ class CarRepository @Inject constructor() {
     }
 
 
-    suspend fun login(request: LoginRequest) : Result<LoginResponse> {
+    suspend fun login(request: LoginRequest) : Result<Dto_login> {
         return safeApiCall {
             RetrofitAPI.apiService.login(request)
         }
