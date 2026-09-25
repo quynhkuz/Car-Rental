@@ -29,4 +29,40 @@
     <string name="booking_details">Booking Details</string>
     <string name="contact">Contact*</string>
     <string name="payment_methods">Payment methods</string>
+    <string name="up_photo">Up Photo</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+
+    <!-- UpLoadFileActivity -->
+    <string name="driver_documents">Driver Documents</string>
+    <string name="cccd">Identity Card</string>
+    <string name="cccd_no">Card No.</string>
+    <string name="cccd_no_hint">12 digits</string>
+    <string name="cccd_front">Front side</string>
+    <string name="cccd_back">Back side</string>
+    <string name="gplx">Driving License</string>
+    <string name="gplx_no">License No.</string>
+    <string name="gplx_no_hint">12 digits</string>
+    <string name="gplx_class">Class</string>
+    <string name="gplx_expiry">Expiry Date</string>
+    <string name="gplx_expiry_hint">DD/MM/YYYY</string>
+    <string name="selfie_photo">Selfie Photo</string>
+    <string name="selfie_photo_optional">Selfie Photo (optional)</string>
+    <string name="remove">Remove</string>
+    <string name="submit">Submit</string>
+    <string name="select_date">Select date</string>
+    <string name="pick_photo_source">Select photo</string>
+    <string name="take_photo">Take photo</string>
+    <string name="choose_from_gallery">Choose from gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="err_cccd_no">Card No. must be 12 digits</string>
+    <string name="err_cccd_front">Please add the front side of the card</string>
+    <string name="err_cccd_back">Please add the back side of the card</string>
+    <string name="err_gplx_no">License No. must be 12 digits</string>
+    <string name="err_gplx_class">Please select a class</string>
+    <string name="err_gplx_expiry">Please select the expiry date</string>
+    <string name="err_gplx_expiry_past">The expiry date must be in the future</string>
+    <string name="err_camera_permission">Camera permission is required</string>
+    <string name="err_photo_failed">Could not read the selected photo</string>
+    <string name="success_submit">Submitted successfully</string>
 </resources>

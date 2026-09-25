@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_primary"
+    tools:context=".ui.activity.upfile.UpLoadFileActivity">
+
+    <com.example.test.ui.csview.StatusBarView
+        android:id="@+id/v_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:contentDescription="@string/cancel"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_status" />
+
+    <com.example.test.ui.csview.CsTextTitle
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/driver_documents"
+        app:layout_constraintBottom_toBottomOf="@id/ic_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ic_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/_20sdp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit"
+        app:layout_constraintTop_toBottomOf="@id/ic_back">
+
+        <LinearLayout
+            android:id="@+id/ll_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_13sdp"
+            android:paddingRight="@dimen/_13sdp">
+
+            <com.example.test.ui.csview.CsTextName
+                android:id="@+id/tv_cccd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cccd" />
+
+            <com.example.test.ui.csview.CsTextContent
+                android:id="@+id/lbl_cccd_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/cccd_no" />
+
+            <com.example.test.ui.csview.CsEditText
+                android:id="@+id/edt_cccd_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:hint="@string/cccd_no_hint"
+                android:inputType="number"
+                android:maxLength="12" />
+
+            <LinearLayout
+                android:id="@+id/ll_cccd_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.example.test.ui.csview.CsImageField
+                    android:id="@+id/img_front"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_weight="1"
+                    app:label="@string/cccd_front" />
+
+                <com.example.test.ui.csview.CsImageField
+                    android:id="@+id/img_back"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    app:label="@string/cccd_back" />
+            </LinearLayout>
+
+            <com.example.test.ui.csview.CsTextName
+                android:id="@+id/tv_gplx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/gplx" />
+
+            <com.example.test.ui.csview.CsTextContent
+                android:id="@+id/lbl_gplx_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/gplx_no" />
+
+            <com.example.test.ui.csview.CsEditText
+                android:id="@+id/edt_gplx_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:hint="@string/gplx_no_hint"
+                android:inputType="number"
+                android:maxLength="12" />
+
+            <com.example.test.ui.csview.CsTextContent
+                android:id="@+id/lbl_gplx_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/gplx_class" />
+
+            <com.example.test.ui.csview.CsEditText
+                android:id="@+id/edt_gplx_class"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableEnd="@drawable/ic_dropdown"
+                android:focusable="false"
+                android:hint="@string/gplx_class" />
+
+            <com.example.test.ui.csview.CsTextContent
+                android:id="@+id/lbl_gplx_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/gplx_expiry" />
+
+            <com.example.test.ui.csview.CsEditText
+                android:id="@+id/edt_gplx_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:focusable="false"
+                android:hint="@string/gplx_expiry_hint" />
+
+            <!-- ============ Selfie ============ -->
+            <com.example.test.ui.csview.CsTextName
+                android:id="@+id/tv_selfie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/selfie_photo_optional" />
+
+            <com.example.test.ui.csview.CsImageField
+                android:id="@+id/img_selfie"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:label="@string/selfie_photo" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.example.test.ui.csview.CsButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:typeColor="black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

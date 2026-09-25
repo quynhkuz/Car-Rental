@@ -14,6 +14,8 @@ import com.example.test.core.BaseActivity
 import com.example.test.databinding.ActivityLoginBinding
 import com.example.test.model.login.LoginRequest
 import com.example.test.ui.activity.MainActivity
+import com.example.test.ui.activity.upfile.UpLoadFileActivity
+import com.example.test.ui.activity.upfile.UpLoadPhotoActivity
 import com.example.test.viewmodel.CarViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -51,11 +53,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
 //            }
 
 
-            val tk = "0364184928"
-            val mk = "test"
-            viewModel.login(LoginRequest(tk, mk))
+//            val tk = "0364184928"
+//            val mk = "test"
+//            viewModel.login(LoginRequest(tk, mk))
 
-//            openActivity(MainActivity::class.java)
+            openActivity(UpLoadPhotoActivity::class.java)
         }
     }
 

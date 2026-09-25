@@ -14,5 +14,8 @@
 
     </declare-styleable>
 
+    <declare-styleable name="CsImageField">
+        <attr name="label" format="string" />
+    </declare-styleable>
 
 </resources>

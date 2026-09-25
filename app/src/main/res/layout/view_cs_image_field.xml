@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cs_bg_img_field"
+    android:clipToOutline="true">
+
+    <ImageView
+        android:id="@+id/img_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/up_photo"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tools:src="@drawable/img_car_test"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/v_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/camera"
+            android:src="@drawable/ic_camera" />
+
+        <com.example.test.ui.csview.CsTextContent
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            tools:text="Mặt trước CCCD" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ic_remove"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_gravity="top|end"
+        android:layout_margin="@dimen/_6sdp"
+        android:contentDescription="@string/remove"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_close"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

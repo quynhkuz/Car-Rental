@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_primary"
+    tools:context=".ui.activity.upfile.UpLoadPhotoActivity">
+
+    <com.example.test.ui.csview.StatusBarView
+        android:id="@+id/v_status"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/v_upload"
+        android:background="@drawable/cs_bg_up_file"
+        app:layout_constraintTop_toBottomOf="@id/v_status"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ic_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera"/>
+            <ImageView
+                android:id="@+id/ic_gallery"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_gallery"/>
+        </LinearLayout>
+        <com.example.test.ui.csview.CsTextContent
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/up_photo"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/v_img"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/v_upload"
+        app:layout_constraintLeft_toLeftOf="@id/v_upload"
+        app:layout_constraintRight_toRightOf="@id/v_upload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"/>
+        <ImageView
+            android:id="@+id/ic_remove"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"/>
+    </RelativeLayout>
+
+
+    <com.example.test.ui.csview.CsButton
+        android:id="@+id/btn_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_width="match_parent"
+        android:text="Up Load"
+        android:layout_height="@dimen/_45sdp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
